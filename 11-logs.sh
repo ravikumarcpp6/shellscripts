@@ -1,8 +1,12 @@
 #!/bin/bash
 
 ID=$(id -u)
+R="\e[31m"
+G="\e[32m"
+Y="\e[33M"
+N="\e[0m"
 
-echo "script name:: $0"
+echo -e " $G script name:: $0 $N"
 TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
@@ -11,19 +15,19 @@ VALIDATE()
 {
 if [ $1 -ne 0 ]
     then 
-         echo "ERROR:: $2 FAILED"
+         echo -e "ERROR:: $2 $R FAILED $N"
          exit 1
     else 
-         echo "$2 SUCCESS"
+         echo -e "$2 $G SUCCESS $N"
  fi
  }
 
 if [ $ID -ne 0 ]
     then 
-        echo "ERROR:: Run Script with root user"
+        echo -e "ERROR:: Run Script with root user"
         exit 1 # give other than zero to stop
     else
-        echo "You Are ROOT USER"
+        echo -e "You Are ROOT USER"
 fi  # fi means reverse of if, indicating condition end
 
 yum install mysql -y &>> $LOGFILE
