@@ -10,7 +10,7 @@ if [ $ID -ne 0 ]
         echo "You Are ROOT USER"
 fi  # fi means reverse of if, indicating condition end
 
-yum install mysql -y
+yum install mysqll -y
 
 if [$? -ne 0 ]
     then 
