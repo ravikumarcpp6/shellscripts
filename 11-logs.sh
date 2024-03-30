@@ -27,7 +27,7 @@ if [ $ID -ne 0 ]
         echo -e "ERROR:: Run Script with root user"
         exit 1 # give other than zero to stop
     else
-        echo -e "You Are ROOT USER"
+        echo -e "$R You Are ROOT USER $N"
 fi  # fi means reverse of if, indicating condition end
 
 yum install mysql -y &>> $LOGFILE
