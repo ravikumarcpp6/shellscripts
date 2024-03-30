@@ -19,3 +19,13 @@ if [ $? -ne 0 ]
     else 
          echo "MYSQL INSTALLATION SUCCESS"
  fi   
+
+ yum install git -y
+
+ if [ $? -ne 0 ]
+    then 
+        echo "ERROR:: GIT INSTALLATION FAILED"
+        exit 1
+    else 
+         echo "GIT INSTALLATION SUCCESS"
+ fi            
