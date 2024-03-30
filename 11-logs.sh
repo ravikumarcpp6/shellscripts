@@ -3,7 +3,8 @@
 ID=$(id -u)
 
 echo "script name:: $0"
-##LOG_FILE=
+TIMESTAMP=$(date +%F-%H-%M-%S)
+LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 
 VALIDATE()
@@ -25,8 +26,8 @@ if [ $ID -ne 0 ]
         echo "You Are ROOT USER"
 fi  # fi means reverse of if, indicating condition end
 
-yum install mysql -y
+yum install mysql -y &>>LOGFILE
 VALIDATE $? "INSTALLING SQL"
 
-yum install git -y
+yum install git -y &>>LOGFILE
 VALIDATE $? "INSTALLING GIT"
