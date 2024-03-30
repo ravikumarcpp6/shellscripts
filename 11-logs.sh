@@ -9,7 +9,7 @@ N="\e[0m"
 echo -e " $G script name:: $0 $N"
 TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
-
+echo "Script started executing at $TIMESTAMP" &>> $LOGFILE
 
 VALIDATE()
 {
