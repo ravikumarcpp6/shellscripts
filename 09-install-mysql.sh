@@ -14,8 +14,8 @@ yum install mysqll -y
 
 if [ $? -ne 0 ]
     then 
-    echo "ERROR:: MYSQL INSTALLATION FAILED"
-    exit 1
+         echo "ERROR:: MYSQL INSTALLATION FAILED"
+         exit 1
     else 
-    echo "MYSQL INSTALLATION SUCCESS"
+         echo "MYSQL INSTALLATION SUCCESS"
  fi   
