@@ -17,7 +17,7 @@ if [ $ID -ne 0 ]
      echo -e "$R ERROR:: Please Run with Root User$N"
      exit 1
  else
-     echo -e "$G You are a ROOT user"    
+     echo -e "$G You are a ROOT user$N"    
 fi    
 
 echo "TIME IS ::$TIMESTAMP"
