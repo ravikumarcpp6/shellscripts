@@ -39,12 +39,12 @@ VALIDATE()
 for package in $@
 do 
     yum list installed $package
-        if [ $? -ne 0]
+        if [ $? -ne 0 ]
            then 
                 yum install $package -y &>> $LOGFILE
                 VALIDATE $? "Installing $package" 
                 exit 1
             else 
-                echo -e "$package has already installed.... $Y SKIPPING...$N"
+                echo -e "$G $package has already installed....$N $Y SKIPPING...$N"
         fi
 done
