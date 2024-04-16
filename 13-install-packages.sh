@@ -18,7 +18,6 @@ echo "Script started executing at $TIMESTAMP" &>> $LOGFILE
 if [ $ID -ne 0 ]
     then 
      echo -e "$R ERROR:: Please Run with Root User $N"
-     exit 1
     else
      echo -e "$G You are a ROOT user $N"    
 fi    
@@ -41,10 +40,9 @@ do
     yum list installed $package
         if [ $? -ne 0 ]
            then 
-                yum install $package -y &>> $LOGFILE
+                yum install $package -y 
                 VALIDATE $? "Installing $package" 
-                exit 1
             else 
-                echo -e "$G $package has already installed....$N $Y SKIPPING...$N"
+                echo -e "$Y $package has already installed ...SKIPPING...$N"
         fi
 done
