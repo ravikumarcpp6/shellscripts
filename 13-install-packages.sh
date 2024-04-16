@@ -7,3 +7,4 @@ if[ID -ne 0]
      echo "ERROR:: Please Run with Root User"
  else
      echo "You are a ROOT user"    
+fi    
