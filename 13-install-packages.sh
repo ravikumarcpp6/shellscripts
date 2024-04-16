@@ -16,20 +16,20 @@ echo "Script started executing at $TIMESTAMP" &>> $LOGFILE
 #package=git for first time
 
 if [ $ID -ne 0 ]
- then 
+    then 
      echo -e "$R ERROR:: Please Run with Root User $N"
      exit 1
- else
+    else
      echo -e "$G You are a ROOT user $N"    
 fi    
 
-VALIDATE
+VALIDATE()
          { 
             if [ $1 -ne 0 ]
             then echo -e "$2...$R FAILED $N"
                           exit 1
             else 
-                 echo -e "$2...$ GSuccess $N"       
+                 echo -e "$2...$G Success $N"       
             fi            
 
            }
