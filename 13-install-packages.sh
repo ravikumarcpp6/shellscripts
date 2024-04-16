@@ -1,10 +1,11 @@
 #!/bin/bash
 
 ID=$(id -u)
+R=
 
 if [ $ID -ne 0 ]
  then 
-     echo "ERROR:: Please Run with Root User"
+     echo -e "$RERROR:: Please Run with Root User$N"
  else
      echo "You are a ROOT user"    
 fi    
