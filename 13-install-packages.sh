@@ -5,7 +5,8 @@ R=
 
 if [ $ID -ne 0 ]
  then 
-     echo -e "$RERROR:: Please Run with Root User$N"
+     echo -e "$R ERROR:: Please Run with Root User$N"
+     exit 1
  else
      echo "You are a ROOT user"    
 fi    
