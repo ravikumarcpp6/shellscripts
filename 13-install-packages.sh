@@ -26,7 +26,6 @@ VALIDATE()
          { 
             if [ $1 -ne 0 ]
             then echo -e "$2...$R FAILED $N"
-                          exit 1
             else 
                  echo -e "$2...$G Success $N"       
             fi            
@@ -43,6 +42,6 @@ do
                 yum install $package -y 
                 VALIDATE $? "Installing $package" 
             else 
-                echo -e "$Y $package has already installed ...SKIPPING...$N"
+                echo -e "$package has already installed ...$Y SKIPPING...$N"
         fi
 done
