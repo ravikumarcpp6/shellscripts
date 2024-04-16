@@ -10,12 +10,14 @@ LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 echo "Script started executing at $TIMESTAMP" &>> $LOGFILE
 
+echo "All Arguments Passed: $@"
+
 if [ $ID -ne 0 ]
  then 
      echo -e "$R ERROR:: Please Run with Root User$N"
      exit 1
  else
-     echo "You are a ROOT user"    
+     echo -e "$G You are a ROOT user"    
 fi    
 
 echo "TIME IS ::$TIMESTAMP"
