@@ -8,7 +8,7 @@ Y="\e[30m"
 
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
-echo "Script started executing at $TIMESTAMP" &>> $LOGFIE
+echo "Script started executing at $TIMESTAMP" &>> $LOGFILE
 
 if [ $ID -ne 0 ]
  then 
