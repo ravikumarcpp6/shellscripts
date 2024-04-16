@@ -1,7 +1,10 @@
 #!/bin/bash
 
 ID=$(id -u)
-R=
+TIMESTAMP=$(date +%F-%H-%M-%S)
+R="\e[31m"
+G="\e[32m"
+Y="\e[30m"
 
 if [ $ID -ne 0 ]
  then 
@@ -10,3 +13,5 @@ if [ $ID -ne 0 ]
  else
      echo "You are a ROOT user"    
 fi    
+
+echo "TIME IS ::$TIMESTAMP"
