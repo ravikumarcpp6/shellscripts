@@ -4,7 +4,7 @@ ID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
 R="\e[31m"
 G="\e[32m"
-Y="\e[30m"
+Y="\e[33m"
 N="\e[0m"
 
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
@@ -42,6 +42,6 @@ do
                 yum install $package -y 
                 VALIDATE $? "Installing $package" 
             else 
-                echo -e "$Y $package has already installed ...SKIPPING...$N"
+                echo -e "$package has already installed ...$Y SKIPPING...$N"
         fi
 done
