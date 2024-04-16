@@ -34,16 +34,17 @@ VALIDATE()
 
            }
 
-echo "TIME IS ::$TIMESTAMP"
+#echo "TIME IS ::$TIMESTAMP"
 
 for package in $@
 do 
     yum list installed $package
         if[ $? -ne 0]
         then 
-             yum install $package -y & >> $LOGFILE
+             yum install $package -y &>> $LOGFILE
              VALIDATE $? "Installing $package" 
+             exit 1
          else 
-          echo -e "$package has already installed $Y SKIPPING...$N"
+          echo -e "$package has already installed.... $Y SKIPPING...$N"
         fi
 done
